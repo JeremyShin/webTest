@@ -6,6 +6,7 @@ import java.net.Socket;
 public class SocketHandler extends Thread {
     private ChatServer chatServer;
     private Socket socket;
+    private String name;
 
     public SocketHandler(ChatServer chatServer, Socket socket) {
         this.chatServer = chatServer;
@@ -21,18 +22,26 @@ public class SocketHandler extends Thread {
             in =  new BufferedReader(new InputStreamReader(socket.getInputStream()));
             out = new PrintWriter(new OutputStreamWriter(socket.getOutputStream()));
 
+            this.name = in.readLine();
+            chatServer.broadcast(this.name + "님이 입장했어요.");
+
+            chatServer.addPrintWriter(out);
+
             String line = null;
+
+
             while((line = in.readLine()) != null) {
-                out.println(line);
-                out.flush();
+                chatServer.broadcast(this.name + " : " +line);
             }
         } catch(Exception ex) {
                 ex.printStackTrace();
             System.out.println("Chat Handler close");
         } finally {
+            chatServer.removePrintWriter(out);
+            chatServer.broadcast(this.name + "님이 퇴장했어요.");
             System.out.println("Chat Handler close");
             try { in.close(); } catch(Exception e) {}
-            try { out.close(); } catch(Exception e) {}
+            out.close();
         }
 
     }
