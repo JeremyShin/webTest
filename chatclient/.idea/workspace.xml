@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2258b06b-9609-41ce-a889-fa404585e514" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../chatserver/src/main/java/my/examples/chatpractice4/ChatServer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chatserver/src/main/java/my/examples/chatpractice4/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chatserver/src/main/java/my/examples/chatpractice4/SocketHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../chatserver/src/main/java/my/examples/chatpractice5/ChatServer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../chatserver/src/main/java/my/examples/chatpractice5/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../chatserver/src/main/java/my/examples/chatpractice5/SocketHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../chatserver/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../chatserver/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -146,7 +147,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1537197389534" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1537201150284" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -213,7 +214,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Image Layers" />
       <window_info id="Designer" />
