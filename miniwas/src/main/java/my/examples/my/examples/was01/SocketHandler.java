@@ -30,20 +30,11 @@ public class SocketHandler extends Thread{
 
             String line;
             while((line = in.readLine()) != null) {
-                url += line + "\n";
+                if(in.readLine() != null) url += line + "\n";
             }
-            System.out.println(url);
-            String firstlLine = url.substring(0, url.lastIndexOf("HTTP/1.1"));
-            System.out.println(firstlLine);
-            System.out.println(" ");
 
-            httpMethod = firstlLine.substring(0, firstlLine.lastIndexOf("/"));
-            path = firstlLine.substring(firstlLine.indexOf("/")+1, firstlLine.lastIndexOf("?"));
-            String header = firstlLine.substring(firstlLine.indexOf("?")+1,firstlLine.length()-1);
-            System.out.println("httpMethod "+httpMethod);
-            System.out.println("path "+path);
-            System.out.println("header "+header);
-
+            SplitMachine sm = new SplitMachine(url);
+            sm.split();
 
         }catch (Exception ex) {
             ex.printStackTrace();
