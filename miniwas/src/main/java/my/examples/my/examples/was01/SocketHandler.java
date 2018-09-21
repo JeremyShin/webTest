@@ -35,6 +35,9 @@ public class SocketHandler extends Thread{
 
             SplitMachine sm = new SplitMachine(url);
             sm.split();
+            System.out.println(sm.getHttpMethod());
+            System.out.println(sm.getPath());
+            System.out.println(sm.getHeaderInfo());
 
         }catch (Exception ex) {
             ex.printStackTrace();
